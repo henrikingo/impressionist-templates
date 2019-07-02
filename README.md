@@ -5,21 +5,14 @@ Used also by the [Impressionist creator](https://github.com/henrikingo/impressio
 ## Usage
 
     git clone --recursive https://github.com/henrikingo/impressionist-templates.git
-    cd impressionist-templates
+    cp -r --dereference impressionist-templates/empty-slides new-presentation
 
 * Each directory is one impress.js presentation.
 * The main presentation file is index.html
+* In each presentation directory, `impress.js` is a symlink to the actual ../impress.js
+  * Use `cp --dereference` when copying a template to your own presentation. This will give you a real impress.js directory embedded in the new presentation instead of empty slides.
+  * Probably won't work on Windows, but just copy the real impress.js dir into your presentation.
 * impress.js is a git submodule, the actual impress.js repo
-* In each presentation directory, `impress.js` is a symlink to the actual impress.js
-  * Probably won't work on Windows, but the below steps will
-* If you create a presentation out of a template:
-  1. Create a copy of the template directory (e.g. `empty-slides`)
-  2. Delete the symlink `impress.js`
-  3. Copy the actual `impress.js` directory into its place (e.g. `empty-slides/impress.js`)
-  4. Under `empty-slides/extras`, delete the extra modules you won't need, to save space.
-     (e.g. `empty-slides/impress.js/extras/*`)
-
-(Impressionist will use the above sequence when creating a new presentation from a template.)
 
 ## About presentations in this repository
 
