@@ -9,8 +9,8 @@ Used also by the [Impressionist creator](https://github.com/henrikingo/impressio
 
 * Each directory is one impress.js presentation.
 * The main presentation file is index.html
-* In each presentation directory, `impress.js` is a symlink to the actual ../impress.js
-  * Use `cp --dereference` when copying a template to your own presentation. This will give you a real impress.js directory embedded in the new presentation instead of empty slides.
+* In each presentation directory, `impress.js` is a symlink to the actual `../impress.js`
+  * Use `cp --dereference` when copying a template to your own presentation. This will give you a real impress.js directory embedded in the new presentation instead of empty symlink.
   * Probably won't work on Windows, but just copy the real impress.js dir into your presentation.
 * impress.js is a git submodule, the actual impress.js repo
 
