@@ -5,6 +5,11 @@
     <title>Empty slides | Impressionist template with just empty white slides</title>
     <meta name="description" content="Impressionist template with just empty white slides" />
     <meta name="author" content="Henrik Ingo" />
+    <!-- For use by the Impressionist GUI editor. -->
+    <!-- Impressionist will use these space separated lists to show a list of words that can be used as class attributes or ids for steps. -->
+    <meta name="impressionist-step-styles" content="empty title" />
+    <meta name="impressionist-step-ids" content="overview" />
+
     <link href="css/empty-slides.css" rel="stylesheet" />
 </head>
 
@@ -16,8 +21,12 @@
 
 <div id="impress" data-transition-duration="2000">
 
-    <div class="step" data-x="0" data-y="0" data-z="350">
-        <p>Slide one</p>
+    <div class="step title" data-x="0" data-y="0" data-z="350">
+        <h1>Title slide</h1>
+    </div>
+
+    <div class="step" data-x="0" data-y="1000" data-z="350">
+        <p>Content slide</p>
     </div>
 
     <div id="overview" class="step" data-x="700" data-y="-100" data-z="1000" data-scale="1" style="pointer-events: none;">
